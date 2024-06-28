@@ -16,3 +16,22 @@ model User {
 
   @@map("users")
 }
+
+model Check_in {
+  id           String    @id @default(uuid())
+  created_at   DateTime  @default(now())
+  validated_at DateTime?
+
+  @@map("check_ins")
+}
+
+model Gyms {
+  id          String  @id @default(uuid())
+  name        String
+  description String?
+  phone       String?
+  latitude    Decimal
+  longitude   Decimal
+
+  @@map("gyms")
+}
