@@ -7,7 +7,7 @@ import { InvalidCredentialsError } from './errors/invalid-credentials-error'
 describe('Register Use Case', async () => {
   it('should be able to authenticate', async () => {
     const usersRepository = new InMemoryUsersRepository()
-    const sup = new AuthenticateUseCase(usersRepository)
+    const sut = new AuthenticateUseCase(usersRepository)
 
     await usersRepository.create({
       name: 'John Doe',
@@ -15,7 +15,7 @@ describe('Register Use Case', async () => {
       password_hash: await hash('123456', 6),
     })
 
-    const { user } = await sup.execute({
+    const { user } = await sut.execute({
       email: 'johndoe@example.com',
       password: '123456',
     })
@@ -25,10 +25,10 @@ describe('Register Use Case', async () => {
 
   it('should not be able to authenticate with wrong email', async () => {
     const usersRepository = new InMemoryUsersRepository()
-    const sup = new AuthenticateUseCase(usersRepository)
+    const sut = new AuthenticateUseCase(usersRepository)
 
     await expect(() =>
-      sup.execute({
+      sut.execute({
         email: 'johndoe@example.com',
         password: '123456',
       }),
@@ -37,7 +37,7 @@ describe('Register Use Case', async () => {
 
   it('should not be able to authenticate with wrong password', async () => {
     const usersRepository = new InMemoryUsersRepository()
-    const sup = new AuthenticateUseCase(usersRepository)
+    const sut = new AuthenticateUseCase(usersRepository)
 
     await usersRepository.create({
       name: 'John Doe',
@@ -46,7 +46,7 @@ describe('Register Use Case', async () => {
     })
 
     await expect(() =>
-      sup.execute({
+      sut.execute({
         email: 'johndoe@example.com',
         password: '123123',
       }),
