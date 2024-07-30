@@ -37,7 +37,7 @@ describe('Search Gyms Use Case', async () => {
     expect(gyms).toEqual([expect.objectContaining({ name: 'Javascript gym' })])
   })
 
-  it.skip('should be able to search for paginated gyms', async () => {
+  it('should be able to search for paginated gyms', async () => {
     for (let i = 1; i <= 22; i++) {
       await gymsRepository.create({
         name: `Javascript gym ${i}`,
