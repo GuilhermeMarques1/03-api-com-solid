@@ -8,7 +8,7 @@ GymPass
 - [x] Deve ser possível obter o perfil de um usuário logado;
 - [x] Deve ser possível obter o número de check-ins realizados pelo usuário logado;
 - [x] Deve ser possível obter seu histórico de check-ins;
-- [ ] Deve ser possível o usuário buscar academias próximas;
+- [ ] Deve ser possível o usuário buscar academias próximas (até 10km);
 - [x] Deve ser possível o usuário buscar uma academia pelo nome;
 - [x] Deve ser possível o usuário realizar check-in em uma academia;
 - [ ] Deve ser possível validar o check-in de um usuário;
