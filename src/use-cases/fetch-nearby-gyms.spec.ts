@@ -11,7 +11,7 @@ describe('Fetch Nearby Gyms Use Case', async () => {
     sut = new FetchNearbyGymsUseCase(gymsRepository)
   })
 
-  it('should be able to fetch check in history', async () => {
+  it('should be able to fetch nearby gyms', async () => {
     await gymsRepository.create({
       name: 'Near gym',
       description: null,
