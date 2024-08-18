@@ -25,5 +25,5 @@ GymPass
 ## Requisitos Não Funcionais
 - [x] A senha do usuário deve estar criptografada;
 - [x] Os dados da aplicação precisam estar persistidos em um banco Postgresql;
-- [ ] Todas as listas de dados precisam estar paginadas com 20 itens por página;
-- [ ] O usuário deve ser identificado por um JWT (JSON Web Token);
+- [x] Todas as listas de dados precisam estar paginadas com 20 itens por página;
+- [x] O usuário deve ser identificado por um JWT (JSON Web Token);
